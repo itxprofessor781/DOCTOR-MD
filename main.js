@@ -140,7 +140,7 @@ const { pmblockerCommand, readState: readPmBlockerState } = require('./commands/
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029VbAoVt0Bqbr1vsgafC3r";
+global.channelLink = "https://whatsapp.com/channel/0029VbBlLGx8fewtdvDr9K0B";
 global.ytch = "supremLord";
 
 // Add this near the top of main.js with other global configurations
@@ -149,8 +149,8 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: false,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363348739987203@newsletter',
-            newsletterName: 'ARSLAN BOT',
+            newsletterJid: '120363402552986198@newsletter',
+            newsletterName: 'DOCTOR-MD',
             serverMessageId: -1
         }
     }
@@ -205,7 +205,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             // Only respond occasionally to avoid spam
             if (Math.random() < 0.1) {
                 await sock.sendMessage(chatId, {
-                    text: '🛑 ARSLAN BOT: You’ve been officially blocked from commands. Talk to an admin.',
+                    text: '🛑 DOCTOR-MD: You’ve been officially blocked from commands. Talk to an admin.',
                     ...channelInfo
                 });
             }
@@ -277,7 +277,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             ) {
                 if (!isSenderAdmin && !message.key.fromMe) {
                     await sock.sendMessage(chatId, {
-                        text: '😈 ARSLAN BOT: Nice try, peasant. This button belongs to the kings and queens (admins).',
+                        text: '😈 DOCTOR-MD: Nice try, peasant. This button belongs to the kings and queens (admins).',
                         ...channelInfo
                     });
                     return;
@@ -312,7 +312,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 if (quotedMessage?.stickerMessage) {
                     await simageCommand(sock, quotedMessage, chatId);
                 } else {
-                    await sock.sendMessage(chatId, { text: '🎯 Tip from ARSLAN BOT: Just reply to any sticker with .simage and watch the magic happen ✨.', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '🎯 Tip from DOCTOR-MD: Just reply to any sticker with .simage and watch the magic happen ✨.', ...channelInfo });
                 }
                 break;
             }
@@ -323,7 +323,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             case userMessage.startsWith('.mute'):
                 const muteDuration = parseInt(userMessage.split(' ')[1]);
                 if (isNaN(muteDuration)) {
-                    await sock.sendMessage(chatId, { text: '🕒 ARSLAN BOT Tip: Minutes must be valid! Try: .mute 10\neg to mute 10 minutes\n.mute 10', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '🕒 DOCTOR-MD Tip: Minutes must be valid! Try: .mute 10\neg to mute 10 minutes\n.mute 10', ...channelInfo });
                 } else {
                     await muteCommand(sock, chatId, senderId, muteDuration);
                 }
@@ -413,7 +413,7 @@ case (userMessage && userMessage.trim().toLowerCase() === '.whoisgay'):
                     // Save updated data
                     fs.writeFileSync('./data/messageCount.json', JSON.stringify(data, null, 2));
 
-                    await sock.sendMessage(chatId, { text: `🔄 Mode updated — ARSLAN BOT is now in *${action}* mode.`, ...channelInfo });
+                    await sock.sendMessage(chatId, { text: `🔄 Mode updated — DOCTOR-MD is now in *${action}* mode.`, ...channelInfo });
                 } catch (error) {
                     console.error('Error updating access mode:', error);
                     await sock.sendMessage(chatId, { text: 'Failed to update bot access mode', ...channelInfo });
@@ -459,7 +459,7 @@ case (userMessage && userMessage.trim().toLowerCase() === '.whoisgay'):
                 }
                 if (!isBotAdmin) {
                     await sock.sendMessage(chatId, {
-                        text: '⚠️ ARSLAN BOT: Make me an admin first so I can do my magic. 🪄',
+                        text: '⚠️ DOCTOR-MD: Make me an admin first so I can do my magic. 🪄',
                         ...channelInfo
                     });
                     return;
@@ -649,7 +649,7 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
             case userMessage.startsWith('.move'):
                 const position = parseInt(userMessage.split(' ')[1]);
                 if (isNaN(position)) {
-                    await sock.sendMessage(chatId, { text: '🕹 ARSLAN BOT says: That’s not a valid position! Pick a real one.', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '🕹 DOCTOR-MD says: That’s not a valid position! Pick a real one.', ...channelInfo });
                 } else {
                     tictactoeMove(sock, chatId, senderId, position);
                 }
@@ -683,7 +683,7 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                 if (answer) {
                     answerTrivia(sock, chatId, answer);
                 } else {
-                    sock.sendMessage(chatId, { text: '💬 ARSLAN BOT: Provide your answer using .answer <answer>', ...channelInfo });
+                    sock.sendMessage(chatId, { text: '💬 DOCTOR-MD: Provide your answer using .answer <answer>', ...channelInfo });
                 }
                 break;
             case userMessage.startsWith('.compliment'):
@@ -766,7 +766,7 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                         await sock.sendMessage(chatId, { text: '👑 This power is reserved for the royal admins of this group.', ...channelInfo });
                     }
                 } else {
-                    await sock.sendMessage(chatId, { text: '🏠 ARSLAN BOT: This command can only be used inside groups...', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '🏠 DOCTOR-MD: This command can only be used inside groups...', ...channelInfo });
                 }
                 break;
             case userMessage.startsWith('.goodbye'):
@@ -783,7 +783,7 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                         await sock.sendMessage(chatId, { text: '👑 This power is reserved for the royal admins of this group.', ...channelInfo });
                     }
                 } else {
-                    await sock.sendMessage(chatId, { text: '🏠 ARSLAN BOT: This command can only be used inside groups...', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '🏠 DOCTOR-MD: This command can only be used inside groups...', ...channelInfo });
                 }
                 break;
             case userMessage === '.git':
@@ -795,7 +795,7 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                 break;
             case userMessage.startsWith('.antibadword'):
                 if (!isGroup) {
-                    await sock.sendMessage(chatId, { text: '🏠 ARSLAN BOT: This command can only be used inside groups...', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '🏠 DOCTOR-MD: This command can only be used inside groups...', ...channelInfo });
                     return;
                 }
 
@@ -804,7 +804,7 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                 isBotAdmin = adminStatus.isBotAdmin;
 
                 if (!isBotAdmin) {
-                    await sock.sendMessage(chatId, { text: '*👑 Give ARSLAN BOT admin powers before trying this!*', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '*👑 Give DOCTOR-MD admin powers before trying this!*', ...channelInfo });
                     return;
                 }
 
@@ -812,14 +812,14 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                 break;
             case userMessage.startsWith('.chatbot'):
                 if (!isGroup) {
-                    await sock.sendMessage(chatId, { text: '👥 ARSLAN BOT says: You gotta be in a group to run this..', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '👥 DOCTOR-MD says: You gotta be in a group to run this..', ...channelInfo });
                     return;
                 }
 
                 // Check if sender is admin or bot owner
                 const chatbotAdminStatus = await isAdmin(sock, chatId, senderId);
                 if (!chatbotAdminStatus.isSenderAdmin && !message.key.fromMe) {
-                    await sock.sendMessage(chatId, { text: '*🚫 ARSLAN BOT: Only group admins or the bot owner can use this command. 👑*', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '*🚫 DOCTOR-MD: Only group admins or the bot owner can use this command. 👑*', ...channelInfo });
                     return;
                 }
 
@@ -858,21 +858,21 @@ case userMessage === '.fight' || userMessage === '.battle' || userMessage === '.
                 break;
             case userMessage === '.groupinfo' || userMessage === '.infogp' || userMessage === '.infogrupo':
                 if (!isGroup) {
-                    await sock.sendMessage(chatId, { text: '👥 ARSLAN BOT says: You must be in a group to use this.', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '👥 DOCTOR-MD says: You must be in a group to use this.', ...channelInfo });
                     return;
                 }
                 await groupInfoCommand(sock, chatId, message);
                 break;
             case userMessage === '.resetlink' || userMessage === '.revoke' || userMessage === '.anularlink':
                 if (!isGroup) {
-                    await sock.sendMessage(chatId, { text: '👥 ARSLAN BOT says: You must be in a group to use this.', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '👥 DOCTOR-MD says: You must be in a group to use this.', ...channelInfo });
                     return;
                 }
                 await resetlinkCommand(sock, chatId, senderId);
                 break;
             case userMessage === '.staff' || userMessage === '.admins' || userMessage === '.listadmin':
                 if (!isGroup) {
-                    await sock.sendMessage(chatId, { text: '👥 ARSLAN BOT says: You must be in a group to use this.', ...channelInfo });
+                    await sock.sendMessage(chatId, { text: '👥 DOCTOR-MD says: You must be in a group to use this.', ...channelInfo });
                     return;
                 }
                 await staffCommand(sock, chatId, message);
@@ -1024,7 +1024,7 @@ case userMessage.startsWith('.sudo'):
 
                     if (!groupJid.endsWith('@g.us')) {
                         return await sock.sendMessage(chatId, {
-                            text: "👥 ARSLAN BOT says: You must be in a group to use this."
+                            text: "👥 DOCTOR-MD says: You must be in a group to use this."
                         });
                     }
 
@@ -1056,7 +1056,7 @@ case userMessage.startsWith('.sudo'):
         // Only try to send error message if we have a valid chatId
         if (chatId) {
             await sock.sendMessage(chatId, {
-                text: '💥 Error! ARSLAN BOT couldn’t complete your request.',
+                text: '💥 Error! DOCTOR-MD couldn’t complete your request.',
                 ...channelInfo
             });
         }
@@ -1096,8 +1096,8 @@ async function handleGroupParticipantUpdate(sock, update) {
             // Get welcome message from data
             const data = JSON.parse(fs.readFileSync('./data/userGroupData.json'));
             const welcomeData = data.welcome[id];
-            const welcomeMessage = welcomeData?.message || '👑 ARSLAN BOT: Hail {user}! The group just got cooler with you here!';
-            const channelId = welcomeData?.channelId || '120363348739987203@newsletter';
+            const welcomeMessage = welcomeData?.message || '👑 DOCTOR-MD: Hail {user}! The group just got cooler with you here!';
+            const channelId = welcomeData?.channelId || '120363402552986198@newsletter';
 
             // Send welcome message for each new participant
             for (const participant of participants) {
@@ -1115,7 +1115,7 @@ async function handleGroupParticipantUpdate(sock, update) {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: channelId,
-                            newsletterName: 'ARSLAN BOT',
+                            newsletterName: 'DOCTOR-MD',
                             serverMessageId: -1
                         }
                     }
@@ -1137,7 +1137,7 @@ async function handleGroupParticipantUpdate(sock, update) {
             const data = JSON.parse(fs.readFileSync('./data/userGroupData.json'));
             const goodbyeData = data.goodbye[id];
             const goodbyeMessage = goodbyeData?.message || 'Goodbye {user} 👋';
-            const channelId = goodbyeData?.channelId || '120363348739987203@newsletter';
+            const channelId = goodbyeData?.channelId || '120363402552986198@newsletter';
 
             // Send goodbye message for each leaving participant
             for (const participant of participants) {
@@ -1154,7 +1154,7 @@ async function handleGroupParticipantUpdate(sock, update) {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: channelId,
-                            newsletterName: 'ARSLAN BOT',
+                            newsletterName: 'DOCTOR-MD',
                             serverMessageId: -1
                         }
                     }
