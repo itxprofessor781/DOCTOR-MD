@@ -1,7 +1,7 @@
 {
-  "name": "arslan-tech-md",
+  "name": "doctor-md",
   "version": "2.0.0",
-  "description": "🤖 Arslan-Tech Bot - A Powerful WhatsApp MD Chatbot with Fun, Utilities & Custom Tools",
+  "description": "🤖 DOCTOR-MD Bot - A Powerful WhatsApp MD Chatbot with Fun, Utilities & Custom Tools",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -58,11 +58,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arslan-MD/Arslan-Tech-MD.git"
+    "url": "git+https://github.com/itxprofessor781/DOCTOR-MD.git"
   },
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Arslan-MD/Arslan-Tech-MD/issues"
+    "url": "https://github.com/itxprofessor781/DOCTOR-MD.issues"
   },
-  "homepage": "https://github.com/Arslan-MD/Arslan-Tech-MD#readme"
+  "homepage": "https://github.com/itxprofessor781/DOCTOR-MD.readme"
 }
