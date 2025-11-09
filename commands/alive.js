@@ -51,7 +51,7 @@ module.exports = {
       // ===============================
       const aliveMsg = `
 🌸━━━━━━━━━━━━━━━━━━━🌸
- ✨ 🅐🅡🅢🅛🅐🅝-🅣🅔🅒🅗-🅥2 ✨
+ ✨ DOCTOR-MD-🅥2 ✨
 🌸━━━━━━━━━━━━━━━━━━━🌸
 
 💖 *Hello ${tagUser},*
@@ -70,14 +70,14 @@ I’m alive, active & ready to serve you 😍✨
 
 💌 Stay safe, stay happy, and keep smiling 🌷🌸  
 ━━━━━━━━━━━━━━━━━━━━━━━
-⚡ 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 *𝐀𝐑𝐒𝐋𝐀𝐍-𝐌𝐃*
+⚡ 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 *DOCTOR-MD *
 🌸━━━━━━━━━━━━━━━━━━━🌸`;
 
       // ===============================
       // 📤 SEND MESSAGE WITH IMAGE
       // ===============================
       await conn.sendMessage(chatId, {
-        image: { url: 'https://files.catbox.moe/ryo6vn.jpg' }, // Alive image
+        image: { url: 'https://files.catbox.moe/ghfslo.jpg' }, // Alive image
         caption: aliveMsg, // Alive message
         mentions: [sender] // Mention user who used the command
       }, { quoted: m });
